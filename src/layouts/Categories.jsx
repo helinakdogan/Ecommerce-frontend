@@ -5,9 +5,9 @@ export default function Categories() {
     return (
         <div>
         <Menu pointing secondary vertical>
-          <Menu.Item name="home" />
-          <Menu.Item name="messages" />
-          <Menu.Item name="friends" />
+          <Menu.Item name="Ana Sayfa" />
+          <Menu.Item name="Kategoriler" />
+          <Menu.Item name="İndirimdekiler" />
         </Menu>
       </div>
     );

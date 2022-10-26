@@ -1,7 +1,10 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
 import ProductList from "../pages/ProductList";
 import Categories from "./Categories";
+import ProductDetail from "../pages/ProductDetail";
+import CartDetail from "../pages/CartDetail";
 
 export default function Dashboard() {
   return (
@@ -9,11 +12,15 @@ export default function Dashboard() {
       <Grid>
         <Grid.Row>
           <Grid.Column width={4}>
-            <Categories></Categories>
+            <Categories/>
           </Grid.Column>
-
           <Grid.Column width={12}>
-            <ProductList></ProductList>
+            <Routes>
+              <Route exact path = "/" element = {<ProductList/>}/>
+              <Route exact path = "/products" element = {<ProductList/>}/>
+              <Route exact path = "/products/:name" element = {<ProductDetail/>}/>
+              <Route exact path = "/cart" element = {<CartDetail/>}/>
+            </Routes>
           </Grid.Column>
         </Grid.Row>
       </Grid>
