@@ -12,12 +12,12 @@ export default function cartReducer(state = initialState, { type, payload }) {
             if (product) {
                 product.quantity++;
                 return {
-                    ...state
+                    ...state,
                 }
             } else {
                 return {
                     ...state,
-                    cartItems: [...state.cartItems, { quantity: 1, product: payload }]
+                    cartItems: [...state.cartItems, { quantity: 1, product: payload }],
                 }
 
             }

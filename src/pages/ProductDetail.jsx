@@ -10,7 +10,7 @@ export default function ProductDetail() {
 
     useEffect(() => {
         let productService = new ProductService();
-        productService.getByProductName(name).then(result => setProduct(result.data.data));
+        productService.getByProductName(name).then(result => setProduct(result.data.data))
     }, []);
 
     return (
@@ -27,16 +27,16 @@ export default function ProductDetail() {
                         <Card.Header>{product.productName}</Card.Header>
                         <Card.Meta>{product.category.categoryName}</Card.Meta>
                         <Card.Description>
-                            ürün bilgileri <strong>ürün puanı</strong>
+                            Steve wants to add you to the group <strong>best friends</strong>
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
                         <div className='ui two buttons'>
                             <Button basic color='green'>
-                                Sepete ekle
+                                Approve
                             </Button>
                             <Button basic color='pink'>
-                                Favorilere ekle
+                                Decline
                             </Button>
                         </div>
                     </Card.Content>
@@ -44,5 +44,5 @@ export default function ProductDetail() {
             </Card.Group>
 
         </div>
-    )
+    );
 }
